@@ -6,3 +6,8 @@ Cosmic strings are hypothetical one-dimensional objects that may have formed dur
 In response to these challenges, this project proposes the use of machine learning, specifically convolutional neural networks (CNNs), to enhance the detection of cosmic strings in gravitational wave data. CNNs are highly effective in pattern recognition and classification tasks, making them a suitable tool for differentiating between similar-looking data classes, such as cosmic string signals and blip glitches. By training CNNs on a dataset of simulated cosmic string waveforms alongside modeled blip glitches, we aim to develop analgorithm capable of distinguishing these two classes in detector data.
 
 This approach involves generating a set of approximate cosmic string waveforms and crafting realistic blip glitch models to simulate the types of noise found in gravitational wave detectors. The CNN will be trained using this dataset to recognize the subtle differences between glitches and true cosmic string events. In particular, this project focuses on developing and testing this methodology within the context of the Einstein Telescope, a proposed third-generation gravitational wave observatory, which promises to advance our understanding of the early Universe and the potential role of cosmic strings in cosmology.
+
+## Questions
+- Do we have to reconstruct the waveform form the strain?
+- Do we use the strain in the correct way (average of E1, E2 and E3)?
+- How do we make the spectogram?
