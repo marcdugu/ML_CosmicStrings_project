@@ -90,10 +90,11 @@ def individual_plots(data: np.array, x=1, alpha=1):
     plt.tight_layout()
     plt.show()
 
-def gradient_plot(data: np.array, plotname: str, x=1, cmap='viridis'):
+def gradient_plot(data: np.array, plotname: str, cmap='viridis'):
 
     """
     data[n.parray]: 4x65536 array -> column 0-2 are E1, E2 and E3, column 3 is time
+    plotname[string]: name of the splot
     x[int](optional): the number of the figure
     cmap[string](optional): colors for the color map
 
@@ -126,8 +127,7 @@ def gradient_plot(data: np.array, plotname: str, x=1, cmap='viridis'):
 
     # Save the figure
     plot.savefig(f'{plotname}.png') 
-    print("figure has been saved")
-    return
+    print(f"figure has been saved as {plotname}.png")
 
 
 
