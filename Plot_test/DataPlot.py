@@ -90,16 +90,23 @@ def individual_plots(data: np.array, x=1, alpha=1):
     plt.tight_layout()
     plt.show()
 
-def gradient_plot(data: np.array, plotname: str, cmap='viridis'):
+def gradient_plot(data: np.array, arm:int, plotname: str, cmap='viridis', max_25='False', normalized='False'):
 
     """
     data[n.parray]: 4x65536 array -> column 0-2 are E1, E2 and E3, column 3 is time
-    plotname[string]: name of the splot
+    arm[int]: select an arm (can be 1, 2 or 3)
+    plotname[string]: name of the plot
     x[int](optional): the number of the figure
     cmap[string](optional): colors for the color map
+    max_25[bool](optional): change all energy values above 25 to 25
+    normalized[bool](optional): plot normalized energy (normalize between 0 and 1)
 
     Returns a plot of the frequency (y-axis) and energy (colorbar) as function of time 
     """
+    if arm not in (1, 2, 3):
+        raise ValueError(f"arm must be 1, 2, or 3, but got {arm}")
+    else:
+        arm = arm-1
     
     # splice the data
     t0 = data[:,3][0]
@@ -108,10 +115,20 @@ def gradient_plot(data: np.array, plotname: str, cmap='viridis'):
     sample_rate = 1/(t1-t0)  
 
     # Create a GWpy TimeSeries object
-    data = ts(data[:, 0], sample_rate=sample_rate, t0=start_time)
+    data = ts(data[:, arm], sample_rate=sample_rate, t0=start_time)
 
     # Generate a Q-transform spectrogram
     qspecgram = data.q_transform()
+
+    #Plot energies higher then 25 as 25
+    if max_25 == True:
+        qspecgram = np.minimum(qspecgram, 25)
+
+    #Plot normalized energies (normalize between 0 and 1)
+    if normalized == True:
+        normalized_data = (qspecgram) / (qspecgram.max())
+        qspecgram = normalized_data
+
 
     #spectogram plot
     plot = qspecgram.plot(figsize=[8, 4])
@@ -120,10 +137,13 @@ def gradient_plot(data: np.array, plotname: str, cmap='viridis'):
     ax.set_xscale('seconds')
     ax.set_yscale('log')
     ax.set_ylabel('Frequency [Hz]')
+    #set the upper frequency limit to 500Hz
+    ax.set_ylim(top=500)
     ax.grid(True, axis='y', which='both')
+    
 
     # Add a colorbar
-    plot.colorbar(label='Normalized energy', cmap=cmap)
+    plot.colorbar(label='Energy', cmap=cmap)
 
     # Save the figure
     plot.savefig(f'{plotname}.png') 
