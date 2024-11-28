@@ -21,10 +21,11 @@ def combined_plot(data: np.array, x=1, alpha=1):
     t0 = time[0]
     time = time-time[0]
     plt.plot(time, average_data, alpha=alpha)
+    plt.xlim(0, time[-1])
     plt.xlabel('Time (s)')
     plt.ylabel('Amplitude')
 
-def combined_plots_together(data: np.array, x=1, alpha=1):
+def overlap_plot(data: np.array, x=1, alpha=1):
     """
     data[n.parray]: 4x65536 array -> column 0-2 are E1, E2 and E3, column 3 is time
     x[int](optional): the number of the figure
@@ -46,10 +47,13 @@ def combined_plots_together(data: np.array, x=1, alpha=1):
     time = time-time[0]
 
     n_arms = 3
+    colors = ['mediumpurple', 'mediumaquamarine', 'cornflowerblue']
     for arm in range(n_arms):
-        plt.plot(time, E[arm], alpha=alpha)
+        plt.plot(time, E[arm], alpha=alpha, label=f'arm {arm+1}', color=colors[arm])
+    plt.xlim(0, time[-1])
     plt.xlabel('Time (s)')
     plt.ylabel('Amplitude')
+    plt.legend()
 
 def individual_plots(data: np.array, x=1, alpha=1):
     """
@@ -69,23 +73,24 @@ def individual_plots(data: np.array, x=1, alpha=1):
     t0 = time[0]
     time = time-time[0]
 
-    axes[0].plot(time, E1, label='Arm 1', color='red')
+    axes[0].plot(time, E1,color='mediumpurple')
     axes[0].set_title('Strain data in arm 1')
     axes[0].set_xlabel('time (s)')
     axes[0].set_ylabel('strain amplitude')
-    axes[0].legend()
+    axes[0].set_xlim(0, time[-1])
 
-    axes[1].plot(time, E2, label='Arm 2', color = 'green')
+    axes[1].plot(time, E2, color = 'mediumaquamarine')
     axes[1].set_title('Strain data in arm 2')
     axes[1].set_xlabel('time (s)')
     axes[1].set_ylabel('strain amplitude')
-    axes[1].legend()
+    axes[1].set_xlim(0, time[-1])
 
-    axes[2].plot(time, E1, label='Arm 3', color = 'orange')
+    axes[2].plot(time, E3, color = 'cornflowerblue')
     axes[2].set_title('Strain data in arm 3')
     axes[2].set_xlabel('time (s)')
     axes[2].set_ylabel('strain amplitude')
-    axes[2].legend()
+    axes[2].set_xlim(0, time[-1])
+
 
     plt.tight_layout()
     plt.show()
