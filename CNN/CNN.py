@@ -142,7 +142,7 @@ class ConvNN(nn.Module):
 #make subclass to CNN class (NEEDS TWEEKING):
 class DummyCNN(ConvNN):
     def __init__(self):
-        super(ConvNN, self).__init__()
+        super(DummyCNN, self).__init__()
  
     def forward(self, x):
         print("Input shape:", x.shape)  
