@@ -203,6 +203,7 @@ def RunNeuralNetwork(train_loader:DataLoader, test_loader:DataLoader, learning_r
 
     model.to(device)
     epochs = 0
+    state = {'min_validation_loss': float('inf'), 'counter': 0}
 
     train_losses = []
     val_losses = []
@@ -251,7 +252,9 @@ def RunNeuralNetwork(train_loader:DataLoader, test_loader:DataLoader, learning_r
             f"Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
         
         #Early Stopper
-        if Utils.EarlyStopper(val_loss, patience, min_delta):         
+        stop, state = Utils.EarlyStopper(val_loss, patience, min_delta, state)
+        print(state)
+        if stop:         
             print(f'Early Stop at Epoch: {epochs}')
             break
 
@@ -259,6 +262,8 @@ def RunNeuralNetwork(train_loader:DataLoader, test_loader:DataLoader, learning_r
                 
     # Save the trained model
     torch.save(model.state_dict(), 'telescope_signal_cnn.pth')
+
+    Utils.MakePlot(epochs, train_losses, val_losses, val_accuracies)
                 
 '''
 It learns to fast. Learning rate?

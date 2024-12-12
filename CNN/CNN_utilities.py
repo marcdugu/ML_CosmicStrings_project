@@ -5,17 +5,24 @@ Pythonfile where we put some utility functions such as:
 
 """
 
-def EarlyStopper(validation_loss, patience, min_delta):
 
-    min_validation_loss = float('inf')
+def EarlyStopper(validation_loss, patience, min_delta, state):
+
+    min_validation_loss = state.get('min_validation_loss')
+    counter = state.get('counter')
+    
     if validation_loss < min_validation_loss:
         min_validation_loss = validation_loss
         counter = 0
     elif validation_loss > (min_validation_loss + min_delta):
         counter += 1
         if counter >= patience:
-            return True
-    return False
+            return True, {'min_validation_loss': min_validation_loss, 'counter': counter}
+    
+    #update the state
+    state['min_validation_loss'] = min_validation_loss
+    state['counter'] = counter
+    return False, state
 
 #Calculate Manually L_out after applying 1d convolution
 def Calc_Lout_conv1d(L_in, padding, dilation, kernel_size, stride):
