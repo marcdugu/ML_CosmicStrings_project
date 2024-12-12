@@ -191,7 +191,7 @@ Evaluate the model on the validation/test set using accuracy, precision, recall,
 #MAKE FUNCTION
 #change test to validation
 
-def RunNeuralNetwork(train_loader:DataLoader, test_loader:DataLoader, learning_rate:float, 
+def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test_loader:DataLoader, learning_rate:float, 
                      weight_decay:float, num_epochs:int, patience:int, min_delta:int):
     
     #COMMENTS
@@ -229,7 +229,7 @@ def RunNeuralNetwork(train_loader:DataLoader, test_loader:DataLoader, learning_r
         correct = 0
         total = 0
         with torch.no_grad():
-            for signals, labels in test_loader:
+            for signals, labels in validation_loader:
                 signals, labels = signals.to(device), labels.to(device).float()
                 outputs = model(signals)
                 loss = criterion(outputs.squeeze(), labels)
@@ -240,7 +240,7 @@ def RunNeuralNetwork(train_loader:DataLoader, test_loader:DataLoader, learning_r
                 total += labels.size(0)
         
         train_loss /= len(train_loader)
-        val_loss /= len(test_loader)
+        val_loss /= len(validation_loader)
         val_accuracy = correct / total
         
         # Store metrics for plotting
@@ -257,12 +257,37 @@ def RunNeuralNetwork(train_loader:DataLoader, test_loader:DataLoader, learning_r
         if stop:         
             print(f'Early Stop at Epoch: {epochs}')
             break
+    
+    # After completing all epochs, add the test phase
+    print("\nEvaluating on Test Data...")
+    model.eval()  #Set model to evaluation mode
+    test_loss = 0.0
+    correct = 0
+    total = 0
 
+    with torch.no_grad():
+        for signals, labels in test_loader:
+            signals, labels = signals.to(device), labels.to(device).float()
+            outputs = model(signals)
+            loss = criterion(outputs.squeeze(), labels)
+            test_loss += loss.item()
+            
+            #Compute test accuracy
+            preds = torch.sigmoid(outputs).squeeze() > 0.5  #Apply sigmoid and threshold
+            correct += (preds == labels).sum().item()
+            total += labels.size(0)
+
+    #Compute average test loss and accuracy
+    test_loss /= len(test_loader)
+    test_accuracy = correct / total
+
+    print(f"Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}")
 
                 
     # Save the trained model
     torch.save(model.state_dict(), 'telescope_signal_cnn.pth')
 
+    #make plot
     Utils.MakePlot(epochs, train_losses, val_losses, val_accuracies)
                 
 '''
