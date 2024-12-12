@@ -6,6 +6,7 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 import CNN_utilities as Utils
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -106,6 +107,7 @@ class ConvNN(nn.Module):
         #more layers
 
         self.fc2 = nn.Linear(256, 1)  # Binary classification (0 = background, 1 = injection)
+       
 
         
     def forward(self, x):
@@ -131,6 +133,8 @@ class ConvNN(nn.Module):
         # Fully connected layers
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
+        
+        
                 
         return x
 
@@ -210,7 +214,7 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
     val_accuracies = []
 
 
-    for epoch_ in range(num_epochs):
+    for epoch_ in tqdm(range(num_epochs), desc="Training Epochs", ncols=100):
         # Training phase
         model.train()
         train_loss = 0.0
@@ -248,17 +252,18 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
         val_losses.append(val_loss)
         val_accuracies.append(val_accuracy)
         epochs += 1
-        print(f"Epoch [{epoch_+1}/{num_epochs}], "
-            f"Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+        #no print necessary due to implemented loadingbar
+        #print(f"Epoch [{epoch_+1}/{num_epochs}], "
+        #    f"Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
         
         #Early Stopper
         stop, state = Utils.EarlyStopper(val_loss, patience, min_delta, state)
-        print(state)
         if stop:         
             print(f'Early Stop at Epoch: {epochs}')
             break
     
-    # After completing all epochs, add the test phase
+    #After completing all epochs, add the test phase
     print("\nEvaluating on Test Data...")
     model.eval()  #Set model to evaluation mode
     test_loss = 0.0
