@@ -21,10 +21,11 @@ Augmentation (Optional): If the dataset is small, consider augmenting it by addi
 
 class signal_dataset(Dataset):
     
-    def __init__(self, root_dir, num_files_load=5000, transform=None):
+    def __init__(self, root_dir, num_files_load=5000, transform=None, normalized=False):
         self.root_dir = root_dir
         self.num_files_load = num_files_load
         self.transform = transform
+        self.normalized = normalized
         self.data = []
         self.labels = []        
         #Load data and labels
@@ -48,7 +49,11 @@ class signal_dataset(Dataset):
                     #Load data
                     signal_and_time_data = np.load(file_path)
                     signals_data = signal_and_time_data[:, 0:3]
-                    self.data.append(signals_data)
+                    if self.normalized:
+                        signals_data = Utils.Normalize(signals_data)
+                        self.data.append(signals_data)
+                    else:
+                        self.data.append(signals_data)
                     self.labels.append(label)
                     file_count += 1  
 

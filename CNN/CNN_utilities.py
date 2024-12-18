@@ -57,4 +57,14 @@ def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Name=
     
     plt.show()
 
+def Normalize(dataset):
+    '''
+    input: dataset with 3 datasets with the same length size [3,n]
+    returns: normalized dataset size [3,n]
+    '''
+    datasetmax = max(dataset[0] + dataset[1] + dataset[2])
+    for i in range(len(dataset)):
+        dataset[i] = dataset[i]/datasetmax
+    
+    return dataset
 
