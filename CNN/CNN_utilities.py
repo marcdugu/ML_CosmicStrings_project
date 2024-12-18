@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 
 """
 Pythonfile where we put some utility functions such as:
@@ -29,7 +30,7 @@ def Calc_Lout_conv1d(L_in, padding, dilation, kernel_size, stride):
     return ((L_in + (2*padding) - (dilation*(kernel_size-1)) - 1) / stride) + 1
 
 
-def MakePlot(epochs, train_losses, val_losses, val_accuracies):
+def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Name=None):
     fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
     # Plot Train and Validation Loss
     axs[0].plot(range(1, epochs + 1), train_losses, label='Train Loss', marker='o')
@@ -47,4 +48,13 @@ def MakePlot(epochs, train_losses, val_losses, val_accuracies):
     axs[1].grid(True)
     # Show the plot
     plt.tight_layout()
+
+    if Save:
+        dir = "./optimizerplots"
+        location = f"./optimizerplots/{Name}.png"
+        os.makedirs(dir, exist_ok=True)
+        plt.savefig(location, dpi=300, bbox_inches='tight')
+    
     plt.show()
+
+

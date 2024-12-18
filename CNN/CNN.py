@@ -196,7 +196,7 @@ Evaluate the model on the validation/test set using accuracy, precision, recall,
 #change test to validation
 
 def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test_loader:DataLoader, learning_rate:float, 
-                     weight_decay:float, num_epochs:int, patience:int, min_delta:int):
+                     weight_decay:float, num_epochs:int, patience:int, min_delta:int, Save=False, Name=None):
     
     #COMMENTS
     #Model
@@ -293,7 +293,9 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
     torch.save(model.state_dict(), 'telescope_signal_cnn.pth')
 
     #make plot
-    Utils.MakePlot(epochs, train_losses, val_losses, val_accuracies)
+    Utils.MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=Save, Name=Name)
+
+
                 
 '''
 It learns to fast. Learning rate?
