@@ -1,4 +1,6 @@
-\documentclass{article}
+\documentclass{article} %Dont worry about this error. it is okay
+
+%\documentclass{article}
 
 % Language setting
 \usepackage[english]{babel}
@@ -11,46 +13,52 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
 
-\title{Your Paper}
-\author{You}
+
+\title{\bf{Distinguishing between comsic strings and glitches using a neural network}}
+\author[1]{Marlinde Drent}
+\author[1]{Marc Duran Gutierrez}
+\author[1]{Bo Ribbens}
+
+\affil[1]{\it{Department of Physics, Utrecht University}}
 
 \begin{document}
 \maketitle
 
-\begin{abstract}
-Your abstract.
-\end{abstract}
+% Maybe add abstract?
+%\begin{abstract}
+%Your abstract.
+%\end{abstract}
 
 \section{Introduction}
+% TO DO:
+% summarize the paper
 
-Your introduction goes here! 
+\section{The code}
+% TO DO:
+% explain the data structure
+% explain the neural network structure (inlcude figure)
 
-\section{Section 1}
+\section{Results}
+% TO DO:
+% Plot of loss and validation
+% Some facts on the loss, training loops, time taken, etc.
 
-\subsection{Section 1.1}
+\section{Conclusion}
+%TO DO:
+% Conclude if NN works
+% Suggestions for further research -> how to improve the NN?
 
-\subsection{Figure}
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
+
+
 
 %\begin{figure}
 %\centering
 %\includegraphics[width=0.25\linewidth]{}
 %\caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
 %\end{figure}
-
-\subsection{Table}
-
-\begin{table}
-\centering
-\begin{tabular}{l|r}
-Item & Quantity \\\hline
-Widgets & 42 \\
-Gadgets & 13
-\end{tabular}
-\caption{\label{tab:widgets}An example table.}
-\end{table}
-
-\bibliographystyle{alpha}
-\bibliography{sample}
-
-\end{document}
