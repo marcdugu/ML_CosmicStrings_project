@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex Cosmic_report"] 1736346034 "Cosmic_report.aux" "Cosmic_report.bbl" "Cosmic_report" 1736346196 0
+["bibtex Cosmic_report"] 1736346034 "Cosmic_report.aux" "Cosmic_report.bbl" "Cosmic_report" 1736347975 0
   "./Cosmic_report.bib" 1736345346 568 172291180bf67fea9a509c5fd1ed6ad5 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Cosmic_report.aux" 1736346196 1993 0cce88663379bb0da2d34ce974238e1b "pdflatex"
+  "Cosmic_report.aux" 1736347974 1993 0cce88663379bb0da2d34ce974238e1b "pdflatex"
   (generated)
   "Cosmic_report.bbl"
   "Cosmic_report.blg"
   (rewritten before read)
-["pdflatex"] 1736346194 "/Users/marlindedrent/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" "Cosmic_report.pdf" "Cosmic_report" 1736346196 0
-  "/Users/marlindedrent/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" 1736346194 2046 68f79f068ee7e558e425efda6c7dd0f5 ""
+["pdflatex"] 1736347973 "/Users/marlindedrent/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" "Cosmic_report.pdf" "Cosmic_report" 1736347975 0
+  "/Users/marlindedrent/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" 1736347972 2150 230b32afcbd367312c0abc5c53f56ddc ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -102,10 +102,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1708962610 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1708962605 7883455 6ae21667b93c5567ff7fb7340b7a534e ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Cosmic_report.aux" 1736346196 1993 0cce88663379bb0da2d34ce974238e1b "pdflatex"
+  "Cosmic_report.aux" 1736347974 1993 0cce88663379bb0da2d34ce974238e1b "pdflatex"
   "Cosmic_report.bbl" 1736346034 294 8eae69f25186b0fa1b20942d4fc4038f "bibtex Cosmic_report"
-  "Cosmic_report.out" 1736346196 1176 ae593a0d525451a47743452a208d9c07 "pdflatex"
-  "Cosmic_report.tex" 1736346194 2046 68f79f068ee7e558e425efda6c7dd0f5 ""
+  "Cosmic_report.out" 1736347974 1176 ae593a0d525451a47743452a208d9c07 "pdflatex"
+  "Cosmic_report.tex" 1736347972 2150 230b32afcbd367312c0abc5c53f56ddc ""
   (generated)
   "Cosmic_report.aux"
   "Cosmic_report.log"
