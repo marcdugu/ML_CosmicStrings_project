@@ -5,7 +5,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 import CNN_utilities as Utils
-import matplotlib.pyplot as plt
 from tqdm import tqdm
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -101,10 +100,10 @@ class ConvNN(nn.Module):
         # Fifth convolution: feature extraction
         self.conv5 = nn.Conv1d(in_channels=128, out_channels=256, kernel_size=5, stride=2, padding=1)  
         self.pool5 = nn.MaxPool1d(kernel_size=2, stride=2) 
-        #Sixth convolution: feature extraction
+        # Sixth convolution: feature extraction
         self.conv6 = nn.Conv1d(in_channels=256, out_channels=256, kernel_size=3, stride=2, padding=1)  
         self.pool6 = nn.MaxPool1d(kernel_size=2, stride=2) 
-        #Seventh convolution: feature extraction
+        # Seventh convolution: feature extraction
         self.conv7 = nn.Conv1d(in_channels=256, out_channels=256, kernel_size=3, stride=2, padding=1)  
         # Fully connected layers
         self.fc1 = nn.Linear(256 * 16, 256)  # Flatten and reduce to 256 features
@@ -197,8 +196,6 @@ class DummyCNN(ConvNN):
 Train the model 
 Evaluate the model on the validation/test set using accuracy, precision, recall, and F1-score.
 """
-#MAKE FUNCTION
-#change test to validation
 
 def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test_loader:DataLoader, learning_rate:float, 
                      weight_decay:float, num_epochs:int, patience:int, min_delta:int, Save=False, Name=None):
@@ -274,9 +271,10 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
     test_loss = 0.0
     correct = 0
     total = 0
-
+    print(test_loader, len(test_loader))
     with torch.no_grad():
         for signals, labels in test_loader:
+            print(signals, labels)
             signals, labels = signals.to(device), labels.to(device).float()
             outputs = model(signals)
             loss = criterion(outputs.squeeze(), labels)
@@ -286,6 +284,13 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
             preds = torch.sigmoid(outputs).squeeze() > 0.5  #Apply sigmoid and threshold
             correct += (preds == labels).sum().item()
             total += labels.size(0)
+
+    labels_array = labels.numpy()
+    preds_array = preds.numpy()
+
+    countlist = Utils.histogram_counting(labels_array, preds_array)
+    Utils.histogram_plot(countlist)
+
 
     #Compute average test loss and accuracy
     test_loss /= len(test_loader)

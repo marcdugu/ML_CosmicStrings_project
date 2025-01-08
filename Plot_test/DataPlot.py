@@ -3,28 +3,6 @@ import matplotlib.pyplot as plt
 from scipy import signal
 from gwpy.timeseries import TimeSeries as ts
 
-def combined_plot(data: np.array, x=1, alpha=1):
-    """
-    data[n.parray]: 4x65536 array -> column 0-2 are E1, E2 and E3, column 3 is time
-    x[int](optional): the number of the figure
-    alpha[float](optional): the opacity of the plot
-
-    Returns the figure of the average strains as function of time
-    """
-    plt.figure(x, figsize=(30, 10))
-    plt.grid(color='grey')
-    E1 = data[:, 0]
-    E2 = data[:, 1]
-    E3 = data[:, 2]
-    average_data =  (E1 + E2 + E3)/3
-    time = data[:, 3]
-    t0 = time[0]
-    time = time-time[0]
-    plt.plot(time, average_data, alpha=alpha)
-    plt.xlim(0, time[-1])
-    plt.xlabel('Time (s)')
-    plt.ylabel('Amplitude')
-
 def overlap_plot(data: np.array, x=1, alpha=1):
     """
     data[n.parray]: 4x65536 array -> column 0-2 are E1, E2 and E3, column 3 is time

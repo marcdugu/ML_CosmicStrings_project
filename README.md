@@ -11,3 +11,10 @@ This approach involves generating a set of approximate cosmic string waveforms a
 Have a small neural network running on time series data
 
 ## Questions
+
+
+## Plots
+-Folding figure
+-Data figure
+-Loss plot/accuracy figure
+
