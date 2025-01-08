@@ -1,4 +1,4 @@
-\documentclass{article} %Dont worry about this error. it is okay
+\documentclass{article} 
 
 %\documentclass{article}
 
@@ -12,8 +12,13 @@
 % Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[x11names]{xcolor}
+\usepackage[colorlinks=true, citecolor=magenta, linkcolor=black]{hyperref}
 \usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{multicol}
+
+\newcommand\C[1]\null
 
 
 \title{\bf{Distinguishing between comsic strings and glitches using a neural network}}
@@ -27,32 +32,51 @@
 \maketitle
 
 % Maybe add abstract?
-%\begin{abstract}
-%Your abstract.
-%\end{abstract}
+\begin{abstract}
+Your abstract.
+\end{abstract}
 
+\begin{multicols}{2}
 \section{Introduction}
-% TO DO:
-% summarize the paper
+% A very general introduction
+The first detected gravitational wave (GW) signal was GW150914\cite{PhysRevLett.116.061102} in 2015. 
+Since then many technological advancements have been made, yet one thing that still plagues detectors is the presence glitches.    
+These are bursts of non-Gaussian noise that look like a signal \C{Needs citation}.
 
-\section{The code}
-% TO DO:
+\subsection{Cosmic strings}
+% A deep dive into cosmic srings
+
+\subsection{Machine learning}
+% explain what machine learning is
+
+
+\section{Method}
+\subsection{Data}
 % explain the data structure
+
+\subsection{Neural network structure}
 % explain the neural network structure (inlcude figure)
 
 \section{Results}
-% TO DO:
+\subsection{Accuracy}
+% Show the accuracy of the neural network (include plot)
+
+\subsection{Efficiency}
 % Plot of loss and validation
 % Some facts on the loss, training loops, time taken, etc.
+
+
+\section{Discussion}
+% Suggestions for further research -> how to improve the NN?
+
 
 \section{Conclusion}
 %TO DO:
 % Conclude if NN works
-% Suggestions for further research -> how to improve the NN?
 
-\bibliographystyle{alpha}
-\bibliography{sample}
-
+\bibliographystyle{plain}
+\bibliography{Cosmic_report}
+\end{multicols}
 \end{document}
 
 
