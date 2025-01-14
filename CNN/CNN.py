@@ -109,8 +109,9 @@ class ConvNN(nn.Module):
         self.fc1 = nn.Linear(256 * 16, 256)  # Flatten and reduce to 256 features
 
         #more layers
+        self.fc2 = nn.Linear(256, 64)  # Flatten and reduce to 64 features
 
-        self.fc2 = nn.Linear(256, 1)  # Binary classification (0 = background, 1 = injection)
+        self.fc3 = nn.Linear(64, 1)  # Binary classification (0 = background, 1 = injection)
        
 
         
@@ -136,8 +137,8 @@ class ConvNN(nn.Module):
 
         # Fully connected layers
         x = F.relu(self.fc1(x))
-        x = self.fc2(x)
-        
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)       
         
                 
         return x
