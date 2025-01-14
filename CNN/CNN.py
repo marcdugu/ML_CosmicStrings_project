@@ -130,7 +130,7 @@ class ConvNN(nn.Module):
         x = F.relu(self.conv6(x))
         x = self.pool6(x)
         x = F.relu(self.conv7(x))
-        
+         
         
         # Flatten for fully connected layers
         x = torch.flatten(x, 1)  # Flatten to [batch_size, features]
@@ -286,8 +286,8 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
             correct += (preds == labels).sum().item()
             total += labels.size(0)
 
-    labels_array = labels.numpy()
-    preds_array = preds.numpy()
+        labels_array = labels.cpu().numpy()      # Cannot convert CUDA tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
+        preds_array = preds.cpu().numpy()
 
     countlist = Utils.histogram_counting(labels_array, preds_array)
     Utils.histogram_plot(countlist)
