@@ -132,5 +132,33 @@ def gradient_plot(data: np.array, arm:int, plotname: str, cmap='viridis', max_25
     plot.savefig(f'{plotname}.png') 
     print(f"figure has been saved as {plotname}.png")
 
+def final_dataplot(x, data:np.array, arm:int, deviation:str, normalized=False, plotname=None):
 
+    if arm not in (1, 2, 3):
+        raise ValueError(f"arm must be 1, 2, or 3, but got {arm}")
+    else:
+        arm = arm-1
 
+    strain = data[:, arm]
+    time = data[:, 3]
+    t0 = time[0]
+    time = time-t0
+    
+    strainmaxindex = np.argmax(strain)
+    timemax = time[strainmaxindex]
+    deviation = deviation
+
+    if normalized:
+        strain = strain/strainmaxindex
+
+    plt.figure(x, figsize=(4, 6))
+    plt.plot(time, strain, zorder=3)
+    plt.grid(zorder=1, color='lavender')
+    plt.xlim(timemax-deviation, timemax+deviation)
+    plt.xlabel('time (s)')
+    plt.ylabel('strain amplitude')
+
+    plt.savefig(f'{plotname}.png', bbox_inches='tight') 
+    print(f"figure has been saved as {plotname}.png")
+
+    plt.show()
