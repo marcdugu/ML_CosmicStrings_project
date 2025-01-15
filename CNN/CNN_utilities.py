@@ -31,7 +31,7 @@ def Calc_Lout_conv1d(L_in, padding, dilation, kernel_size, stride):
     #Calculate Manually L_out after applying 1d convolution
     return ((L_in + (2*padding) - (dilation*(kernel_size-1)) - 1) / stride) + 1
 
-def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Name=None):
+def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, LearningName=None):
     fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
     # Plot Train and Validation Loss
     axs[0].plot(range(1, epochs + 1), train_losses, label='Train Loss', marker='o')
@@ -52,7 +52,7 @@ def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Name=
 
     if Save:
         dir = "./FinalPlots"
-        location = f"./FinalPlots/{Name}.png"
+        location = f"./FinalPlots/{LearningName}.png"
         os.makedirs(dir, exist_ok=True)
         plt.savefig(location, dpi=300, bbox_inches='tight')
     
@@ -132,7 +132,7 @@ def histogram_counting(labels, predictions):
         print("The length of the labels is not the same as the length of the predictions")
         return
 
-def histogram_plot(countlist, normalized=True, Save=False, Name=None):
+def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
 
     '''
     countlist is fully made by the definition above (histogram_counting) with items:
@@ -152,7 +152,7 @@ def histogram_plot(countlist, normalized=True, Save=False, Name=None):
 
     if Save:
         dir = "./FinalPlots"
-        location = f"./FinalPlots/{Name}.png"
+        location = f"./FinalPlots/{HistName}.png"
         os.makedirs(dir, exist_ok=True)
         plt.savefig(location, dpi=300, bbox_inches='tight')
 
