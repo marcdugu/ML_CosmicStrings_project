@@ -199,7 +199,7 @@ Evaluate the model on the validation/test set using accuracy, precision, recall,
 """
 
 def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test_loader:DataLoader, learning_rate:float, 
-                     weight_decay:float, num_epochs:int, patience:int, min_delta:int, Save=False, Name=None):
+                     weight_decay:float, num_epochs:int, patience:int, min_delta:int, Save=False, HistName=None, LearningName=None):
     
     #COMMENTS
     #Model
@@ -272,10 +272,8 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
     test_loss = 0.0
     correct = 0
     total = 0
-    print(test_loader, len(test_loader))
     with torch.no_grad():
         for signals, labels in test_loader:
-            print(signals, labels)
             signals, labels = signals.to(device), labels.to(device).float()
             outputs = model(signals)
             loss = criterion(outputs.squeeze(), labels)
@@ -290,7 +288,7 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
         preds_array = preds.cpu().numpy()
 
     countlist = Utils.histogram_counting(labels_array, preds_array)
-    Utils.histogram_plot(countlist)
+    Utils.histogram_plot(countlist, Save=Save, HistName=HistName)
 
 
     #Compute average test loss and accuracy
@@ -304,7 +302,7 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
     torch.save(model.state_dict(), 'telescope_signal_cnn.pth')
 
     #make plot
-    Utils.MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=Save, Name=Name)
+    Utils.MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=Save, LearningName=LearningName)
 
 
                 

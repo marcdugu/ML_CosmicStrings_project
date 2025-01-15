@@ -64,7 +64,7 @@ def Normalize(dataset):
     input: dataset with 3 datasets with the same length size [3,n]
     returns: normalized dataset size [3,n]
     '''
-    datasetmax = max(dataset[0] + dataset[1] + dataset[2])
+    datasetmax = max(np.max(dataset[0]), np.max(dataset[1]), np.max(dataset[2]))
     for i in range(len(dataset)):
         dataset[i] = dataset[i]/datasetmax
     
@@ -133,7 +133,7 @@ def histogram_counting(labels, predictions):
         print("The length of the labels is not the same as the length of the predictions")
         return
 
-def histogram_plot(countlist, normalized=True):
+def histogram_plot(countlist, normalized=True, Save=False, Name=None):
 
     '''
     countlist is fully made by the definition above (histogram_counting) with items:
@@ -150,6 +150,12 @@ def histogram_plot(countlist, normalized=True):
 
     plt.xticks(range(len(countlist)), ['True positive', 'True Negative', 'False Positive', 'False Negative'])
     plt.ylabel('Percentage of data')
+
+    if Save:
+        dir = "./FinalPlots"
+        location = f"./FinalPlots/{Name}.png"
+        os.makedirs(dir, exist_ok=True)
+        plt.savefig(location, dpi=300, bbox_inches='tight')
 
     # Show the plot
     plt.show()
