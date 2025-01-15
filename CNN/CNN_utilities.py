@@ -9,7 +9,6 @@ Pythonfile where we put some utility functions such as:
 
 """
 
-
 def EarlyStopper(validation_loss, patience, min_delta, state):
 
     min_validation_loss = state.get('min_validation_loss')
@@ -28,8 +27,8 @@ def EarlyStopper(validation_loss, patience, min_delta, state):
     state['counter'] = counter
     return False, state
 
-#Calculate Manually L_out after applying 1d convolution
 def Calc_Lout_conv1d(L_in, padding, dilation, kernel_size, stride):
+    #Calculate Manually L_out after applying 1d convolution
     return ((L_in + (2*padding) - (dilation*(kernel_size-1)) - 1) / stride) + 1
 
 def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Name=None):
