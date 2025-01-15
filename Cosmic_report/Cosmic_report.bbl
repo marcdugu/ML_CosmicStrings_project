@@ -1,8 +1,32 @@
 \begin{thebibliography}{1}
 
-\bibitem{PhysRevLett.116.061102}
+\bibitem{PhysRevLett116061102}
 B.P.~Abbott et~al. (LIGO Scientific~Collaboration and Virgo Collaboration).
 \newblock Observation of gravitational waves from a binary black hole merger.
 \newblock {\em Phys. Rev. Lett.}, 116:061102, Feb 2016.
+
+\bibitem{Meijer_2024}
+Quirijn Meijer, Melissa Lopez, Daichi Tsuna, and Sarah Caudill.
+\newblock Gravitational-wave searches for cosmic string cusps in einstein telescope data using deep learning.
+\newblock {\em Physical Review D}, 109(2), January 2024.
+
+\bibitem{schmitz2024gravitationalwavescosmicstrings}
+Kai Schmitz and Tobias Schröder.
+\newblock Gravitational waves from cosmic strings for pedestrians, 2024.
+
+\bibitem{MairiSakellariadou}
+Mairi Sakellariadou.
+\newblock Cosmic strings and cosmic superstrings.
+\newblock {\em Nuclear Physics B - Proceedings Supplements}, Volumes 192–193, 2009.
+
+\bibitem{PhysRevLett126241102}
+R.~et~al Abbott.
+\newblock Constraints on cosmic strings using data from the third advanced ligo--virgo observing run.
+\newblock {\em Phys. Rev. Lett.}, 126:241102, Jun 2021.
+
+\bibitem{Cabero_2019}
+M~Cabero, A~Lundgren, A~H Nitz, T~Dent, D~Barker, E~Goetz, J~S Kissel, L~K Nuttall, P~Schale, R~Schofield, and D~Davis.
+\newblock Blip glitches in advanced ligo data.
+\newblock {\em Classical and Quantum Gravity}, 36(15):155010, jul 2019.
 
 \end{thebibliography}
