@@ -50,21 +50,35 @@ These are bursts of non-Gaussian noise that look like a signal \C{Needs citation
 These glitches can be mistaken for a signal, so it is important to find a way to distinguish between a signal and a glitch.
 In this work we focus on the use of machine learning to distinguish between a glitch and a signal.
 
-\subsection{Cosmic strings}
+\subsection{Cosmic strings and glitches}
 % A deep dive into cosmic srings
-Cosmic strings are one-dimensional topological defects and originate form field theories \cite{Meijer_2024}.
-These defects could have formed from spontanious symmetry breaking in the early universe \cite{schmitz2024gravitationalwavescosmicstrings}.
+Cosmic strings are one-dimensional topological defects and originate form field theories~\cite{Meijer_2024}.
+These defects could have formed from spontanious symmetry breaking in the early universe~\cite{schmitz2024gravitationalwavescosmicstrings}.
 These cosmic strings are of interest since they affect our understanding of physics, and can help confirm or rule out centrain physics models. \\
 \indent
-Cosmic strings appear at cosmological scales as thin strings with large densities, and their motion is well described by the Nambu-Goto action \cite{MairiSakellariadou}.
+Cosmic strings appear at cosmological scales as thin strings with large densities, and their motion is well described by the Nambu-Goto action~\cite{MairiSakellariadou}.
 Cosmic stings can both be open strings or closed loops, and two cosmic strings are able to interact with eachother. \C{Needs citation}\\
 \indent
 To detect cosmic strings we first need to understand what a GW signal with a cosmic string source looks like.
-Cosmic strings can produce GW signals in multiple ways. Examples include the formation of cusps and kinks \cite{PhysRevLett126241102}. 
+Cosmic strings can produce GW signals in multiple ways. Examples include the formation of cusps and kinks~\cite{PhysRevLett126241102}. 
 Here we will focus on the cusps. A cusp is a singularity, where a point traveling along the curve would have to turn around.
 When this occurs, the physical string snaps into a cusp shape, and is instantaniously accelerated to the speed of light at that point.
-A burst GW is then emitted in the direction of acceleration \cite{Meijer_2024}.
-Such a signal can be seen in figure \ref{fig1}.
+A burst GW is then emitted in the direction of acceleration~\cite{Meijer_2024}.
+Such a signal can be seen in the left plot in figure~\ref{CS_signal_and_glitch}.\\
+\begin{figure}[h!]
+    %Here I want both the signal and the glitch plot, side by side
+    \centering
+    \includegraphics[width=\linewidth]{../Dataplots/injection3.png}
+    \caption{The signal produced by the cusp of a cosmic string.}
+    \label{CS_signal_and_glitch}
+\end{figure}
+\indent
+Whith the knowledge of what the signal looks like, the next step is to search for a signal.
+The problem with this is that the form of the signal is very similar to that of centrain glitches, like the blip glitch.
+Blib glitches are short noise transients with a large frequency bandwidth~\cite{Cabero_2019}. 
+The form of this glitch can be seen in the right plot in figure figure~\ref{CS_signal_and_glitch}\\
+\indent
+Since a GW signal from cosmic strings can be so similar to glitches, it is crucial to develop a method to distinguish between them.
 
 \subsection{Machine learning}
 % explain what machine learning is

@@ -620,6 +620,11 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT ../Dataplots/injection3.png
+INPUT ../Dataplots/injection3.png
+INPUT ../Dataplots/injection3.png
+INPUT ../Dataplots/injection3.png
+INPUT ../Dataplots/injection3.png
 INPUT ./Cosmic_report.bbl
 INPUT Cosmic_report.bbl
 INPUT ./Cosmic_report.bbl
