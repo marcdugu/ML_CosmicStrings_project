@@ -33,18 +33,38 @@
 
 % Maybe add abstract?
 \begin{abstract}
-Your abstract.
+    The detection of cosmic strings is important because reasons \C{why do we want them?}. 
+    The search for these comsic strings is being held back by detector glitches.
+    These glithces can strongly resemble comsic strings. 
+    It is therefore very important to develop a method of distinguishing between a cosmic string signal and a glitch.
+    In the work we focus on using a neural network for this task.
 \end{abstract}
 
 \begin{multicols}{2}
 \section{Introduction}
 % A very general introduction
-The first detected gravitational wave (GW) signal was GW150914\cite{PhysRevLett.116.061102} in 2015. 
-Since then many technological advancements have been made, yet one thing that still plagues detectors is the presence glitches.    
+The first detected gravitational wave (GW) signal was GW150914\cite{PhysRevLett116061102} in 2015. 
+These GW signals can originate from several sources, one of which is cosmic strings.
+Since the first observed GW many technological advancements have been made, yet one thing that still plagues detectors is the presence glitches.    
 These are bursts of non-Gaussian noise that look like a signal \C{Needs citation}.
+These glitches can be mistaken for a signal, so it is important to find a way to distinguish between a signal and a glitch.
+In this work we focus on the use of machine learning to distinguish between a glitch and a signal.
 
 \subsection{Cosmic strings}
 % A deep dive into cosmic srings
+Cosmic strings are one-dimensional topological defects and originate form field theories \cite{Meijer_2024}.
+These defects could have formed from spontanious symmetry breaking in the early universe \cite{schmitz2024gravitationalwavescosmicstrings}.
+These cosmic strings are of interest since they affect our understanding of physics, and can help confirm or rule out centrain physics models. \\
+\indent
+Cosmic strings appear at cosmological scales as thin strings with large densities, and their motion is well described by the Nambu-Goto action \cite{MairiSakellariadou}.
+Cosmic stings can both be open strings or closed loops, and two cosmic strings are able to interact with eachother. \C{Needs citation}\\
+\indent
+To detect cosmic strings we first need to understand what a GW signal with a cosmic string source looks like.
+Cosmic strings can produce GW signals in multiple ways. Examples include the formation of cusps and kinks \cite{PhysRevLett126241102}. 
+Here we will focus on the cusps. A cusp is a singularity, where a point traveling along the curve would have to turn around.
+When this occurs, the physical string snaps into a cusp shape, and is instantaniously accelerated to the speed of light at that point.
+A burst GW is then emitted in the direction of acceleration \cite{Meijer_2024}.
+Such a signal can be seen in figure \ref{fig1}.
 
 \subsection{Machine learning}
 % explain what machine learning is
@@ -74,7 +94,7 @@ These are bursts of non-Gaussian noise that look like a signal \C{Needs citation
 %TO DO:
 % Conclude if NN works
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{Cosmic_report}
 \end{multicols}
 \end{document}

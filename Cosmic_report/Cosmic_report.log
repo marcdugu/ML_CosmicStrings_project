@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  8 JAN 2025 15:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  15 JAN 2025 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -450,25 +450,37 @@ Package hyperref Info: Link coloring ON on input line 31.
 \@outlinefile=\write3
 \openout3 = `Cosmic_report.out'.
 
- (./Cosmic_report.bbl) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Cosmic_report.aux)
+
+LaTeX Warning: Reference `fig1' on page 1 undefined on input line 67.
+
+(./Cosmic_report.bbl
+Underfull \hbox (badness 5548) in paragraph at lines 9--12
+\OT1/cmr/m/n/10 and Sarah Caudill.  Gravitational-wave
+ []
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2] (./Cosmic_report.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Cosmic_report.out' has not changed.
 (rerunfilecheck)             Checksum: AE593A0D525451A47743452A208D9C07;1176.
  ) 
 Here is how much of TeX's memory you used:
- 11542 strings out of 476025
- 183550 string characters out of 5790017
- 1859388 words of memory out of 5000000
- 31834 multiletter control sequences out of 15000+600000
- 518515 words of font info for 53 fonts, out of 8000000 for 9000
+ 11554 strings out of 476025
+ 183789 string characters out of 5790017
+ 1868388 words of memory out of 5000000
+ 31840 multiletter control sequences out of 15000+600000
+ 518823 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,76p,328b,529s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Cosmic_report.pdf (1 page, 100333 bytes).
+ 75i,5n,76p,328b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Cosmic_report.pdf (2 pages, 123528 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
