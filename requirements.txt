@@ -13,4 +13,4 @@ numpy
 tqdm
 
 #Package for spectrogram visualization
-gwpy
+#gwpy
