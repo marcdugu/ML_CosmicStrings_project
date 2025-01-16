@@ -84,7 +84,7 @@ def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Learn
         os.makedirs(dir, exist_ok=True)
         plt.savefig(location, dpi=300, bbox_inches='tight')
     
-    plt.show()
+    #plt.show()
 
 #########################################################################################################
 
@@ -202,6 +202,6 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
         plt.savefig(location, dpi=300, bbox_inches='tight')
 
     # Show the plot
-    plt.show()
+    #plt.show()
 
 #########################################################################################################
