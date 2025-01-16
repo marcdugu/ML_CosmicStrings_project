@@ -52,8 +52,8 @@ def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Learn
     plt.tight_layout()
 
     if Save:
-        dir = "./FinalPlots"
-        location = f"./FinalPlots/{LearningName}.png"
+        dir = "./CNN/FinalPlots"
+        location = f"./CNN/FinalPlots/{LearningName}.png"
         os.makedirs(dir, exist_ok=True)
         plt.savefig(location, dpi=300, bbox_inches='tight')
     
@@ -152,8 +152,8 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
     plt.ylabel('Percentage of data')
 
     if Save:
-        dir = "./FinalPlots"
-        location = f"./FinalPlots/{HistName}.png"
+        dir = "./CNN/FinalPlots"
+        location = f"./CNN/FinalPlots/{HistName}.png"
         os.makedirs(dir, exist_ok=True)
         plt.savefig(location, dpi=300, bbox_inches='tight')
 

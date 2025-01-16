@@ -299,7 +299,7 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
 
                 
     # Save the trained model
-    torch.save(model.state_dict(), 'telescope_signal_cnn.pth')
+    torch.save(model.state_dict(), './CNN/GW_signal_cnn.pth')
 
     #make plot
     Utils.MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=Save, LearningName=LearningName)
