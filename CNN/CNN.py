@@ -1,3 +1,10 @@
+#########################################################################################################
+#######                                                                                           #######
+#######                             Neural network main code                                      #######
+#######                                                                                           #######
+#########################################################################################################
+
+#importing the packages
 import os
 import numpy as np
 import torch
@@ -255,10 +262,6 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
         val_losses.append(val_loss)
         val_accuracies.append(val_accuracy)
         epochs += 1
-
-        #no print necessary due to implemented loadingbar
-        #print(f"Epoch [{epoch_+1}/{num_epochs}], "
-        #    f"Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
         
         #Early Stopper
         stop, state = Utils.EarlyStopper(val_loss, patience, min_delta, state)

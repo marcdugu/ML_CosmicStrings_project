@@ -1,17 +1,31 @@
+#########################################################################################################
+#######                                                                                           #######
+#######                           Neural network utility code                                     #######
+#######                                                                                           #######
+#########################################################################################################
+
+#importing packages
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
-"""
-Pythonfile where we put some utility functions such as:
-
-"""
-
+#########################################################################################################
 
 def EarlyStopper(validation_loss, patience, min_delta, state):
 
+    '''
+    EarlyStopper is a function that implements early stopping for model training.
+    It monitors the validation loss and stops training if the loss does not improve for a specified number of epochs (patience).
+    The function returns a boolean indicating whether training should stop and updates the state dictionary.
+    Parameters:
+    - validation_loss: The current validation loss.
+    - patience: The number of epochs to wait for improvement before stopping.
+    - min_delta: The minimum change in loss to count as an improvement.
+    - state: A dictionary storing the current minimum validation loss and a counter for epochs without improvement.
+    Returns:
+    - A tuple (stop_training, updated_state), where stop_training is a boolean and updated_state is the modified state dictionary.
+    '''
+    
     min_validation_loss = state.get('min_validation_loss')
     counter = state.get('counter')
     
@@ -28,11 +42,24 @@ def EarlyStopper(validation_loss, patience, min_delta, state):
     state['counter'] = counter
     return False, state
 
-#Calculate Manually L_out after applying 1d convolution
+#########################################################################################################
+
 def Calc_Lout_conv1d(L_in, padding, dilation, kernel_size, stride):
+    '''
+    Small code that calculates the output length (L_out) of a 1D convolution layer.
+    '''
     return ((L_in + (2*padding) - (dilation*(kernel_size-1)) - 1) / stride) + 1
 
+#########################################################################################################
+
 def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, LearningName=None):
+    
+    """ 
+    MakePlot is a function that generates plots to visualize the learning process during model training.
+    It plots the training and validation losses over epochs, as well as the validation accuracy.
+    The function can also save the generated plots to a specified location if the Save flag is set to True. 
+    """
+
     fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
     # Plot Train and Validation Loss
     axs[0].plot(range(1, epochs + 1), train_losses, label='Train Loss', marker='o')
@@ -59,9 +86,12 @@ def MakePlot(epochs, train_losses, val_losses, val_accuracies, Save=False, Learn
     
     plt.show()
 
+#########################################################################################################
+
 def Normalize(dataset):
     '''
-    input: dataset with 3 datasets with the same length size [3,n]
+    Normalize is a simple function to normalize a specific dataset
+    input: array (np.array) of 3 datasets with the same length size [3,n]
     returns: normalized dataset size [3,n]
     '''
     datasetmax = max(np.max(dataset[0]), np.max(dataset[1]), np.max(dataset[2]))
@@ -69,6 +99,8 @@ def Normalize(dataset):
         dataset[i] = dataset[i]/datasetmax
     
     return dataset
+
+#########################################################################################################
 
 def overlap_plot(data: np.array, x=1, alpha=1, Save=False, Name=None):
 
@@ -108,9 +140,18 @@ def overlap_plot(data: np.array, x=1, alpha=1, Save=False, Name=None):
 
     plt.legend()
 
-def histogram_counting(labels, predictions):
+#########################################################################################################
 
-#running count with g (signal) and f (glitch) with the first letter corresponds to the data and the second to the prediction
+def histogram_counting(labels, predictions):
+    
+    '''
+    histogram_counting is a utility function to plot of how good the CNN performed. 
+    Parameters:
+    - Labels (the correct labels of the dataset (1 or 0)
+    - Predictions (the predicted labels of the dataset (True of False)
+    '''
+
+    #running count with g (signal) and f (glitch) with the first letter corresponds to the data and the second to the prediction
     gg_count = 0
     gf_count = 0
     fg_count = 0
@@ -133,7 +174,10 @@ def histogram_counting(labels, predictions):
         print("The length of the labels is not the same as the length of the predictions")
         return
 
+#########################################################################################################
+
 def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
+    
 
     '''
     countlist is fully made by the definition above (histogram_counting) with items:
@@ -159,3 +203,5 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
 
     # Show the plot
     plt.show()
+
+#########################################################################################################
