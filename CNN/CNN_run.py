@@ -57,7 +57,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #initialize the dataset
 local_root_dir_marc = r'C:\\Users\\marcd\\Desktop\\Master\\Courses\\Machine_Learning\\Project\\data\\CostmiStrings\\mock_data'
 local_root_dir_bo = r'/Users/boribbens/Documents/Universiteit_Utrecht/EP_Master/Semester_1/Computational_aspects_of_Machine_Learning/ML_Project/Datafolder/mock_data'
-main_root_dir = r'/../../Volumes/ML2024_data/GW2/Data'
+main_root_dir = r'/Volumes/ML2024_data/GW2/Data'
 
 dataset = CNN.signal_dataset(root_dir=local_root_dir_bo, num_files_load = num_files_load, normalized = False)
 
