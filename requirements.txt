@@ -1,0 +1,16 @@
+#txt file for creating fast virtual environment
+
+#Package for neural network utilities
+torch
+
+#Package for creating visualizations
+matplotlib
+
+#Numerical computations
+numpy
+
+#Package for progress bars
+tqdm
+
+#Package for spectrogram visualization
+#gwpy
