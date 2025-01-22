@@ -40,15 +40,15 @@ from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 
 #NN parameters
-num_files_load = 40
-num_epochs = 10
+num_files_load = 500
+num_epochs = 50
 batch_size = int(num_files_load/5)
 learning_rate = 0.001
 weight_decay = 0.0001
 
 #breakoff parameters
 min_validation_loss = float('inf') #initializing validation loss
-patience = 50
+patience = 10
 min_delta = 0
 
 #checking for GPU availabiltity
