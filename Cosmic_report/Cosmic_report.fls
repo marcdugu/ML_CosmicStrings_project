@@ -173,11 +173,11 @@ INPUT ../Dataplots/injection3.png
 INPUT ../Dataplots/injection3.png
 INPUT ../Dataplots/injection3.png
 INPUT ../Dataplots/injection3.png
+INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./Cosmic_report.bbl
 INPUT ./Cosmic_report.bbl
 INPUT Cosmic_report.bbl
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
-INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT Cosmic_report.aux
 INPUT ./Cosmic_report.out
 INPUT ./Cosmic_report.out

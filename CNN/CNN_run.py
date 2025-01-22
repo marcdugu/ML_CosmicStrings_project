@@ -40,15 +40,15 @@ from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 
 #NN parameters
-num_files_load = 20
-num_epochs = 5
-batch_size = int(num_files_load/5)
+num_files_load = 10000
+num_epochs = 70
+batch_size = int(num_files_load/100)
 learning_rate = 0.001
 weight_decay = 0.0001
 
 #breakoff parameters
 min_validation_loss = float('inf') #initializing validation loss
-patience = 5
+patience = 10
 min_delta = 0
 
 #checking for GPU availabiltity
@@ -59,7 +59,7 @@ local_root_dir_marc = r'C:\\Users\\marcd\\Desktop\\Master\\Courses\\Machine_Lear
 local_root_dir_bo = r'/Users/boribbens/Documents/Universiteit_Utrecht/EP_Master/Semester_1/Computational_aspects_of_Machine_Learning/ML_Project/Datafolder/mock_data'
 main_root_dir = r'/Volumes/ML2024_data/GW2/Data'
 
-dataset = CNN.signal_dataset(root_dir=local_root_dir_bo, num_files_load = num_files_load, normalized = False)
+dataset = CNN.signal_dataset(root_dir=main_root_dir, num_files_load = num_files_load, normalized = False)
 
 #split data into train/validation/test
 train_size = 0.7
