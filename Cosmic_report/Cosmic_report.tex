@@ -93,8 +93,24 @@ Since a GW signal from cosmic strings can be so similar to glitches, it is cruci
 
 \indent
 The proposed model used in this work is a convolutional neural network (CNN) designed for a bianry classification problem.
-The architecture, shown is Fig. X, extracts features from the input thought seven convolution layers, 
+The architecture, shown is Fig. X, extracts features from the input through seven convolution layers, 
 followed by a fully conected layers that classify the input as either a signal peak or background noise.
+The network accepts three initial time series, coming from three diferent telescopes, which are transformed into a feature map by convolving them.
+This input data can be represented as a 3D tensor with shape (T, 1, 3) where T is the lenght of the time series,
+1 is a single channel for each time step, and 3 denotes the number of imput features corresponding to the three telecopes.
+
+After passing through a convolutional layer, the data is modified by the appliaction of a specfic chosen number N of kernels (also called filters).
+the kernels used have a shape of (k, input channels) with ks ranging from 3 to 7 (idk have to check.).
+
+The kernels slide over the time axis of the input data, performing element-wise multiplications and then summing the elements. 
+This produces a diferent feature map for each kernel which encodes specific patterns or correlations over the window defined by k.
+
+The resulting ouput tensor has a shape (T', number of features map). T' is the length of the time axis after convolution, 
+which depends on the kernel size, stride, and padding.
+
+
+
+
 
 
 
