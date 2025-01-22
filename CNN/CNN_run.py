@@ -39,10 +39,10 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 
-#Neural network parameters
-num_files_load = 500
-num_epochs = 50
-batch_size = int(num_files_load/5)
+#NN parameters
+num_files_load = 10000
+num_epochs = 70
+batch_size = int(num_files_load/100)
 learning_rate = 0.001
 weight_decay = 0.0001
 
@@ -76,5 +76,5 @@ test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 #########################################################################################################
 #running the main neural network code
 
-CNN.RunNeuralNetwork(train_loader, validation_loader, test_loader, learning_rate, weight_decay, num_epochs, patience, min_delta, Save=True, HistName='Hist', LearningName='Learning')
+CNN.RunNeuralNetwork(train_loader, validation_loader, test_loader, learning_rate, weight_decay, num_epochs, patience, min_delta, Save=True, HistName='Hist_test', LearningName='Learning_test')
 
