@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  22 JAN 2025 09:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  22 JAN 2025 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -366,31 +366,63 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \mult@nat@firstbox=\box96
 \colbreak@box=\box97
 \mc@col@check@num=\count317
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count318
+\float@exts=\toks23
+\float@box=\box98
+\@float@everytoks=\toks24
+\@floatcapt=\box99
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen174
+\captionmargin=\dimen175
+\caption@leftmargin=\dimen176
+\caption@rightmargin=\dimen177
+\caption@width=\dimen178
+\caption@indent=\dimen179
+\caption@parindent=\dimen180
+\caption@hangindent=\dimen181
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count319
+\c@continuedfloat=\count320
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count321
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count322
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count318
-\l__pdf_internal_box=\box98
+\l__color_backend_stack_int=\count323
+\l__pdf_internal_box=\box100
 ) (./Cosmic_report.aux)
 \openout1 = `Cosmic_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -428,73 +460,69 @@ LaTeX Font Info:    ... okay on input line 31.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count319
-\scratchdimen=\dimen174
-\scratchbox=\box99
-\nofMPsegments=\count320
-\nofMParguments=\count321
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count322
-\MPscratchDim=\dimen175
-\MPnumerator=\count323
-\makeMPintoPDFobject=\count324
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count324
+\scratchdimen=\dimen182
+\scratchbox=\box101
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen183
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 31.
+Package hyperref Info: Link coloring ON on input line 34.
  (./Cosmic_report.out) (./Cosmic_report.out)
 \@outlinefile=\write3
 \openout3 = `Cosmic_report.out'.
 
-
-
-LaTeX Warning: Reference `CS_signal_and_glitch' on page 1 undefined on input line 67.
-
-<../Dataplots/injection3.png, id=54, 310.761pt x 388.8126pt>
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+<../Dataplots/injection3.png, id=55, 310.761pt x 388.8126pt>
 File: ../Dataplots/injection3.png Graphic file (type png)
 <use ../Dataplots/injection3.png>
-Package pdftex.def Info: ../Dataplots/injection3.png  used on input line 71.
-(pdftex.def)             Requested size: 216.78923pt x 271.24738pt.
+Package pdftex.def Info: ../Dataplots/injection3.png  used on input line 75.
+(pdftex.def)             Requested size: 106.2279pt x 132.90646pt.
+<../Dataplots/background3.png, id=57, 302.0886pt x 385.1991pt>
+File: ../Dataplots/background3.png Graphic file (type png)
+<use ../Dataplots/background3.png>
+Package pdftex.def Info: ../Dataplots/background3.png  used on input line 80.
+(pdftex.def)             Requested size: 106.2279pt x 135.4506pt.
 
-LaTeX Warning: Reference `CS_signal_and_glitch' on page 1 undefined on input line 79.
+Underfull \hbox (badness 10000) in paragraph at lines 58--85
 
+ []
 
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
+[1
 
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-(./Cosmic_report.bbl [1
-
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../Dataplots/injection3.png> <../Dataplots/background3.png>] (./Cosmic_report.bbl
 Underfull \hbox (badness 5548) in paragraph at lines 9--12
 \OT1/cmr/m/n/10 and Sarah Caudill.  Gravitational-wave
  []
 
 ) [2] (./Cosmic_report.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Cosmic_report.out' has not changed.
 (rerunfilecheck)             Checksum: 416323D370B60C38DCA4E2D0734964CB;1247.
  ) 
 Here is how much of TeX's memory you used:
- 11566 strings out of 476025
- 184069 string characters out of 5790017
- 1870388 words of memory out of 5000000
- 31848 multiletter control sequences out of 15000+600000
- 518823 words of font info for 54 fonts, out of 8000000 for 9000
+ 13060 strings out of 476025
+ 213243 string characters out of 5790017
+ 1868388 words of memory out of 5000000
+ 33328 multiletter control sequences out of 15000+600000
+ 518515 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,76p,328b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Cosmic_report.pdf (2 pages, 127155 bytes).
+ 75i,9n,77p,357b,650s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Cosmic_report.pdf (2 pages, 186820 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
