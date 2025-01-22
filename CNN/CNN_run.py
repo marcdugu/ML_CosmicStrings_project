@@ -39,7 +39,7 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 
-#NN parameters
+#Neural network parameters
 num_files_load = 500
 num_epochs = 50
 batch_size = int(num_files_load/5)
