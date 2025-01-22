@@ -76,5 +76,5 @@ test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 #########################################################################################################
 #running the main neural network code
 
-CNN.RunNeuralNetwork(train_loader, validation_loader, test_loader, learning_rate, weight_decay, num_epochs, patience, min_delta, Save=True, HistName='Hist_test', LearningName='Learning_test')
+CNN.RunNeuralNetwork(train_loader, validation_loader, test_loader, learning_rate, weight_decay, num_epochs, patience, min_delta, Save=True, HistName='Hist_final', LearningName='Learning_final')
 
