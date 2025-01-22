@@ -53,7 +53,7 @@ These are bursts of non-Gaussian noise that look like a signal \C{Needs citation
 These glitches can be mistaken for a signal, so it is important to find a way to distinguish between a signal and a glitch.
 In this work we focus on the use of machine learning to distinguish between a glitch and a signal.
 
-\subsection{Cosmic strings and glitches}
+\subsection{Cosmic strings}
 % A deep dive into cosmic srings
 Cosmic strings are one-dimensional topological defects and originate form field theories~\cite{Meijer_2024}.
 These defects could have formed from spontanious symmetry breaking in the early universe~\cite{schmitz2024gravitationalwavescosmicstrings}.
@@ -80,24 +80,27 @@ Such a signal can be seen in the left plot in figure~\ref{CS_signal_and_glitch}.
         \includegraphics[width=\linewidth]{../Dataplots/background3.png}
         \caption{Background noise with a peak.}
     \end{subfigure}
-    \caption{The signal and glitch plots side by side.}
+    \caption{Tha cosmic string signal and background noise.}
     \label{CS_signal_and_glitch}
 \end{figure}
 \indent
-Whith the knowledge of what the signal looks like, the next step is to search for a signal.
-The problem with this is that the form of the signal is very similar to that of centrain glitches, like the blip glitch.
-Blib glitches are short noise transients with a large frequency bandwidth~\cite{Cabero_2019}. 
-The form of this glitch can be seen in the right plot in figure figure~\ref{CS_signal_and_glitch}\\
+With the knowledge of what the signal looks like, the next step is to search for a signal.
+The problem with the search for signals is that background noise can also form a peak, as can be seen in the right plot in figure~\ref{CS_signal_and_glitch}.
 \indent
-Since a GW signal from cosmic strings can be so similar to glitches, it is crucial to develop a method to distinguish between them.
+Since a GW signal from cosmic strings can be so similar to background noise, it is crucial to develop a method to distinguish between them.
 
 \subsection{Machine learning}
 % explain what machine learning is
 
 
+
 \section{Method}
 \subsection{Data}
 % explain the data structure
+The data used to train the neural network is computer generated data.
+There are two datasets; one with background noise and signals and one with just background noise.
+% HOW IS DATA GENERATED?
+
 
 \subsection{Neural network structure}
 % explain the neural network structure (inlcude figure)

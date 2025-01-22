@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 14 items.
 Database file #1: Cosmic_report.bib
-You've used 6 entries,
+You've used 5 entries,
             1791 wiz_defined-function locations,
-            490 strings with 4724 characters,
-and the built_in function-call counts, 1222 in all, are:
-= -- 90
-> -- 73
+            480 strings with 4455 characters,
+and the built_in function-call counts, 885 in all, are:
+= -- 71
+> -- 38
 < -- 0
-+ -- 27
-- -- 21
-* -- 93
-:= -- 217
-add.period$ -- 17
-call.type$ -- 6
-change.case$ -- 6
++ -- 15
+- -- 10
+* -- 55
+:= -- 155
+add.period$ -- 14
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 48
-empty$ -- 115
-format.name$ -- 21
-if$ -- 256
+cite$ -- 5
+duplicate$ -- 39
+empty$ -- 92
+format.name$ -- 10
+if$ -- 190
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 5
-newline$ -- 32
-num.names$ -- 6
-pop$ -- 12
+int.to.str$ -- 5
+missing$ -- 4
+newline$ -- 27
+num.names$ -- 5
+pop$ -- 11
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 23
+skip$ -- 20
 stack$ -- 0
-substring$ -- 54
-swap$ -- 6
+substring$ -- 36
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 9
-width$ -- 7
-write$ -- 65
+while$ -- 7
+width$ -- 6
+write$ -- 54

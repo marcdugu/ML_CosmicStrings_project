@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Cosmic_report"] 1737560206.53494 "Cosmic_report.aux" "Cosmic_report.bbl" "Cosmic_report" 1737560209.72644 0
+["bibtex Cosmic_report"] 1737560335.92152 "Cosmic_report.aux" "Cosmic_report.bbl" "Cosmic_report" 1737560339.07612 0
   "./Cosmic_report.bib" 1736979774 3796 15491016dd760f29907fabe6443794bc ""
   "C:/Users/marcd/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291864736 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Cosmic_report.aux" 1737560208 2293 40e21f6415c7c2d8a453edb7485cb686 "pdflatex"
+  "Cosmic_report.aux" 1737560337 2242 dcfc0d2f3f4c2c02d29654c7f903a6ac "pdflatex"
   (generated)
   "Cosmic_report.bbl"
   "Cosmic_report.blg"
   (rewritten before read)
-["pdflatex"] 1737560207.00589 "c:/Users/marcd/Desktop/Git/ML_course/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" "Cosmic_report.pdf" "Cosmic_report" 1737560209.7278 0
+["pdflatex"] 1737560336.45018 "c:/Users/marcd/Desktop/Git/ML_course/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" "Cosmic_report.pdf" "Cosmic_report" 1737560339.07701 0
   "../Dataplots/background3.png" 1736979774 37831 c9d35b835cbfa2af6e2f7c766b952a87 ""
   "../Dataplots/injection3.png" 1736979774 33677 0c0dad0fec9d52a979316a2fc905a390 ""
   "C:/Users/marcd/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1737560202 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -106,11 +106,11 @@
   "C:/Users/marcd/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/marcd/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/x11nam.def" 1700127522 9125 e0e22f8bd8f488926acdd4e96dcc4d1e ""
   "C:/Users/marcd/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "Cosmic_report.aux" 1737560208 2293 40e21f6415c7c2d8a453edb7485cb686 "pdflatex"
-  "Cosmic_report.bbl" 1737560206 1407 75fad27f16307e6ffd659a775903e709 "bibtex Cosmic_report"
-  "Cosmic_report.out" 1737560208 1247 416323d370b60c38dca4e2d0734964cb "pdflatex"
-  "Cosmic_report.tex" 1737555414 7125 195edff9874c0c81fa371eddcb01916a ""
-  "c:/Users/marcd/Desktop/Git/ML_course/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" 1737555414 7125 195edff9874c0c81fa371eddcb01916a ""
+  "Cosmic_report.aux" 1737560337 2242 dcfc0d2f3f4c2c02d29654c7f903a6ac "pdflatex"
+  "Cosmic_report.bbl" 1737560336 1137 cdea363b2b4767c4e66183db16b49812 "bibtex Cosmic_report"
+  "Cosmic_report.out" 1737560337 1176 ae593a0d525451a47743452a208d9c07 "pdflatex"
+  "Cosmic_report.tex" 1737560331 7164 a8cf0166693593f783a9b6af51378457 ""
+  "c:/Users/marcd/Desktop/Git/ML_course/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" 1737560331 7164 a8cf0166693593f783a9b6af51378457 ""
   (generated)
   "Cosmic_report.aux"
   "Cosmic_report.log"
