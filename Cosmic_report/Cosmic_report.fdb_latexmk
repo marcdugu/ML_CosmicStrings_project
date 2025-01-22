@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex Cosmic_report"] 1737551864.53927 "Cosmic_report.aux" "Cosmic_report.bbl" "Cosmic_report" 1737551866.24952 0
+["bibtex Cosmic_report"] 1737552871.06724 "Cosmic_report.aux" "Cosmic_report.bbl" "Cosmic_report" 1737552872.86491 0
   "./Cosmic_report.bib" 1737049426.4937 3717 15491016dd760f29907fabe6443794bc ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "Cosmic_report.aux" 1737551865.73626 1967 e3d8517636b23a7579d2d038316e37d8 "pdflatex"
+  "Cosmic_report.aux" 1737552872.35592 2293 40e21f6415c7c2d8a453edb7485cb686 "pdflatex"
   (generated)
   "Cosmic_report.bbl"
   "Cosmic_report.blg"
   (rewritten before read)
-["pdflatex"] 1737551864.76271 "/Users/boribbens/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" "Cosmic_report.pdf" "Cosmic_report" 1737551866.24975 0
+["pdflatex"] 1737552871.27772 "/Users/boribbens/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" "Cosmic_report.pdf" "Cosmic_report" 1737552872.86516 0
+  "../Dataplots/background3.png" 1736953291.20918 37831 e6fc24f63cc27c39bb09eb57d487db69 ""
   "../Dataplots/injection3.png" 1736953265.16664 33677 fc54fe5cd03f7b471f10c773d8e0b2f7 ""
-  "/Users/boribbens/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" 1737551862.3088 6557 640ba3b97ca829bb4a16551fd54ea2fd ""
+  "/Users/boribbens/Documents/GitHub/ML_CosmicStrings/Cosmic_report/Cosmic_report.tex" 1737552866.73101 6922 c1559851937cd5ca855cae2da79988ee ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1136768653 1328 5442e22a7072966dbaf88ca900acf3f0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -30,7 +30,6 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1248133631 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -70,8 +69,12 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1705352648 2462 6bc53756156dbd71c1ad550d30a3b93f ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo" 1705352648 8448 dbc0dbf4156c0bb9ba01a1c685d3bad0 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty" 1690576852 12494 0c0cdb824278a4d51cefeb2e79901315 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -104,10 +107,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732903731.67124 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732903695 8221433 23270e436191c157e20038efe167a59d ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Cosmic_report.aux" 1737551865.73626 1967 e3d8517636b23a7579d2d038316e37d8 "pdflatex"
-  "Cosmic_report.bbl" 1737551864.75739 1363 44e9601ae32d47a8e149a8f811fca541 "bibtex Cosmic_report"
-  "Cosmic_report.out" 1737551865.73745 1247 416323d370b60c38dca4e2d0734964cb "pdflatex"
-  "Cosmic_report.tex" 1737551862.3088 6557 640ba3b97ca829bb4a16551fd54ea2fd ""
+  "Cosmic_report.aux" 1737552872.35592 2293 40e21f6415c7c2d8a453edb7485cb686 "pdflatex"
+  "Cosmic_report.bbl" 1737552871.27231 1363 44e9601ae32d47a8e149a8f811fca541 "bibtex Cosmic_report"
+  "Cosmic_report.out" 1737552872.35715 1247 416323d370b60c38dca4e2d0734964cb "pdflatex"
+  "Cosmic_report.tex" 1737552866.73101 6922 c1559851937cd5ca855cae2da79988ee ""
   (generated)
   "Cosmic_report.aux"
   "Cosmic_report.log"

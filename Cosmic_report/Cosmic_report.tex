@@ -17,6 +17,9 @@
 \usepackage{authblk}
 \usepackage{blindtext}
 \usepackage{multicol}
+\usepackage{float}
+\usepackage{subcaption}
+
 
 \newcommand\C[1]\null
 
@@ -65,11 +68,19 @@ Here we will focus on the cusps. A cusp is a singularity, where a point travelin
 When this occurs, the physical string snaps into a cusp shape, and is instantaniously accelerated to the speed of light at that point.
 A burst GW is then emitted in the direction of acceleration~\cite{Meijer_2024}.
 Such a signal can be seen in the left plot in figure~\ref{CS_signal_and_glitch}.\\
-\begin{figure}[h!]
+\begin{figure}[H]
     %Here I want both the signal and the glitch plot, side by side
     \centering
-    \includegraphics[width=\linewidth]{../Dataplots/injection3.png}
-    \caption{The signal produced by the cusp of a cosmic string.}
+    \begin{subfigure}[b]{0.49\columnwidth}
+        \includegraphics[width=\linewidth]{../Dataplots/injection3.png}
+        \caption{The signal produced by the cusp of a cosmic string.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\columnwidth}
+        \includegraphics[width=\linewidth]{../Dataplots/background3.png}
+        \caption{Background noise with a peak.}
+    \end{subfigure}
+    \caption{The signal and glitch plots side by side.}
     \label{CS_signal_and_glitch}
 \end{figure}
 \indent
