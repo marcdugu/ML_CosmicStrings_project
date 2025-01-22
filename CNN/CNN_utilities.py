@@ -185,9 +185,17 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
     label=signal and prediction=glitch (wrong!), label=glitch and prediction=signal (wrong!)]
     '''
     if normalized:
-        countlist_signal = [countlist[0], countlist[2]]/sum([countlist[0], countlist[2]])
-        countlist_noise = [countlist[1], countlist[3]]/sum([countlist[1], countlist[3]])
-        countlist = np.array(countlist_signal[0], countlist_signal[1], countlist_noise[0], countlist_noise[1])
+        print(countlist[0], countlist[2], countlist[1], countlist[3])
+        if countlist[0] != 0 and countlist[2] != 0:
+            countlist_signal = np.array([countlist[0], countlist[2]])/(countlist[0] + countlist[2])
+        else:
+            countlist_signal = np.array([0,0])
+        if countlist[1] != 0 and countlist[3] != 0:
+            countlist_noise = np.array([countlist[1], countlist[3]])/(countlist[1] + countlist[3])
+        else:
+            countlist_noise = np.array([0,0])
+        print(countlist_signal, countlist_noise)
+        countlist = np.array([countlist_signal[0], countlist_signal[1], countlist_noise[0], countlist_noise[1]])
 
     plt.figure()
 
