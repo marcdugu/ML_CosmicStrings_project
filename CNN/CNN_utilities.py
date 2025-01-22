@@ -185,7 +185,6 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
     label=signal and prediction=glitch (wrong!), label=glitch and prediction=signal (wrong!)]
     '''
     if normalized:
-        print(countlist[0], countlist[2], countlist[1], countlist[3])
         if countlist[0] != 0 and countlist[2] != 0:
             countlist_signal = np.array([countlist[0], countlist[2]])/(countlist[0] + countlist[2])
         else:
@@ -194,15 +193,14 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
             countlist_noise = np.array([countlist[1], countlist[3]])/(countlist[1] + countlist[3])
         else:
             countlist_noise = np.array([0,0])
-        print(countlist_signal, countlist_noise)
         countlist = np.array([countlist_signal[0], countlist_signal[1], countlist_noise[0], countlist_noise[1]])
 
     plt.figure()
 
     plt.grid("lavander", zorder=0)
-    plt.bar(range(len(countlist)), countlist, color=['lawngreen', 'red', 'limegreen', 'orangered'], zorder=3) #idk why zorder 3 but oke
+    plt.bar(range(len(countlist)), countlist, color=['limegreen', 'orangered', 'limegreen', 'orangered'], zorder=3) #idk why zorder 3 but oke
 
-    plt.xticks(range(len(countlist)), ['True positive', 'False Positive', 'True Negative', 'False Negative'])
+    plt.xticks(range(len(countlist)), ['True Positive', 'False Positive', 'True Negative', 'False Negative'])
     plt.ylabel('Percentage of data')
 
     if Save:
