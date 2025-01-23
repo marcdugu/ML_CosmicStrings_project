@@ -168,7 +168,8 @@ def histogram_counting(labels, predictions):
             elif labels[i] == 0 and predictions[i] == False:
                 ff_count += 1
         
-        countlist = [gg_count, ff_count, fg_count, gf_count]
+        countlist = np.array([gg_count, ff_count, fg_count, gf_count])
+        txt_write("countlistdata", countlist)
         return countlist
     else:
         print("The length of the labels is not the same as the length of the predictions")
@@ -176,7 +177,7 @@ def histogram_counting(labels, predictions):
 
 #########################################################################################################
 
-def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
+def histogram_plot_marc(countlist, normalized=True, Save=False, HistName=None):
     
 
     '''
@@ -185,11 +186,11 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
     label=signal and prediction=glitch (wrong!), label=glitch and prediction=signal (wrong!)]
     '''
     if normalized:
-        if countlist[0] != 0 and countlist[2] != 0:
+        if countlist[0] != 0 or countlist[2] != 0:
             countlist_signal = np.array([countlist[0], countlist[2]])/(countlist[0] + countlist[2])
         else:
             countlist_signal = np.array([0,0])
-        if countlist[1] != 0 and countlist[3] != 0:
+        if countlist[1] != 0 or countlist[3] != 0:
             countlist_noise = np.array([countlist[1], countlist[3]])/(countlist[1] + countlist[3])
         else:
             countlist_noise = np.array([0,0])
@@ -211,5 +212,43 @@ def histogram_plot(countlist, normalized=True, Save=False, HistName=None):
 
     # Show the plot
     #plt.show()
+
+#########################################################################################################
+
+def histogram_plot_marlinde(countlist, normalized=True, Save=False, HistName=None):
+    
+
+    '''
+    countlist is fully made by the definition above (histogram_counting) with items:
+    [label=signal and prediction=signal (good!), label=glitch and prediction=glitch (good!), 
+    label=signal and prediction=glitch (wrong!), label=glitch and prediction=signal (wrong!)]
+    '''
+    if normalized:
+        countlist = countlist/np.sum(countlist)
+
+    plt.figure()
+
+    plt.grid("lavander", zorder=0)
+    plt.bar(range(len(countlist)), countlist, color=['limegreen', 'limegreen', 'orangered', 'orangered'], zorder=3) #idk why zorder 3 but oke
+
+    plt.xticks(range(len(countlist)), ['True Positive', 'True Negative', 'False Positive', 'False Negative'])
+    plt.ylabel('Percentage of data')
+
+    if Save:
+        dir = "./CNN/FinalPlots"
+        location = f"./CNN/FinalPlots/{HistName}.png"
+        os.makedirs(dir, exist_ok=True)
+        plt.savefig(location, dpi=300, bbox_inches='tight')
+
+    # Show the plot
+    #plt.show()
+
+#########################################################################################################
+
+def txt_write(string, data):
+    f = open('resultsfile.txt', "a")
+    f.write(str(string)+": \n")
+    f.write(str(data)+"\n")
+    f.close()
 
 #########################################################################################################

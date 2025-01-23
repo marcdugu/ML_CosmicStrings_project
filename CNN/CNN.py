@@ -206,7 +206,7 @@ Evaluate the model on the validation/test set using accuracy, precision, recall,
 """
 
 def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test_loader:DataLoader, learning_rate:float, 
-                     weight_decay:float, num_epochs:int, patience:int, min_delta:int, Save=False, HistName=None, LearningName=None):
+                     weight_decay:float, num_epochs:int, patience:int, min_delta:int, Save=False, HistNameMarc=None, HistNameMarl=None, LearningName=None):
     
     #COMMENTS
     #Model
@@ -275,6 +275,10 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
     test_loss = 0.0
     correct = 0
     total = 0
+
+    all_preds = []
+    all_labels = []
+
     with torch.no_grad():
         for signals, labels in test_loader:
             signals, labels = signals.to(device), labels.to(device).float()
@@ -287,11 +291,16 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
             correct += (preds == labels).sum().item()
             total += labels.size(0)
 
-        labels_array = labels.cpu().numpy()      # Cannot convert CUDA tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
-        preds_array = preds.cpu().numpy()
+            all_labels.extend(labels.cpu().numpy())
+            all_preds.extend(preds.cpu().numpy())  
+
+        labels_array = np.array(all_labels)     
+        preds_array = np.array(all_preds)
 
     countlist = Utils.histogram_counting(labels_array, preds_array)
-    Utils.histogram_plot(countlist, Save=Save, HistName=HistName)
+
+    Utils.histogram_plot_marc(countlist, Save=Save, HistName=HistNameMarc)
+    Utils.histogram_plot_marlinde(countlist, Save=Save, HistName=HistNameMarl)
 
 
     #Compute average test loss and accuracy
@@ -299,6 +308,8 @@ def RunNeuralNetwork(train_loader:DataLoader, validation_loader:DataLoader, test
     test_accuracy = correct / total
 
     print(f"Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}")
+    Utils.txt_write("testloss", test_loss)
+    Utils.txt_write("test accuracy", test_accuracy)
 
                 
     # Save the trained model
