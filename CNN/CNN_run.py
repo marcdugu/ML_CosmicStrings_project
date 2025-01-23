@@ -40,9 +40,9 @@ from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 
 #NN parameters
-num_files_load = 10000
-num_epochs = 70
-batch_size = int(num_files_load/100)
+num_files_load = 50
+num_epochs = 5
+batch_size = int(num_files_load/25)
 learning_rate = 0.001
 weight_decay = 0.0001
 
@@ -59,7 +59,7 @@ local_root_dir_marc = r'C:\\Users\\marcd\\Desktop\\Master\\Courses\\Machine_Lear
 local_root_dir_bo = r'/Users/boribbens/Documents/Universiteit_Utrecht/EP_Master/Semester_1/Computational_aspects_of_Machine_Learning/ML_Project/Datafolder/mock_data'
 main_root_dir = r'/Volumes/ML2024_data/GW2/Data'
 
-dataset = CNN.signal_dataset(root_dir=main_root_dir, num_files_load = num_files_load, normalized = False)
+dataset = CNN.signal_dataset(root_dir=local_root_dir_bo, num_files_load = num_files_load, normalized = False)
 
 #split data into train/validation/test
 train_size = 0.7
@@ -76,5 +76,5 @@ test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 #########################################################################################################
 #running the main neural network code
 
-CNN.RunNeuralNetwork(train_loader, validation_loader, test_loader, learning_rate, weight_decay, num_epochs, patience, min_delta, Save=True, HistName='Hist_final', LearningName='Learning_final')
+CNN.RunNeuralNetwork(train_loader, validation_loader, test_loader, learning_rate, weight_decay, num_epochs, patience, min_delta, Save=True, HistNameMarc='Hist_final_marc', HistNameMarl='Hist_final_marl', LearningName='Learning_final')
 
