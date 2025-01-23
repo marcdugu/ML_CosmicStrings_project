@@ -1,0 +1,6 @@
+countlistdata: 
+[959 937  47  57]
+testloss: 
+0.1841821637004614
+test accuracy: 
+0.948
