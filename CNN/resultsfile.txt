@@ -10,3 +10,9 @@ testloss:
 0.6907178163528442
 test accuracy: 
 0.55
+countlistdata: 
+[0 2 0 0]
+testloss: 
+0.622586727142334
+test accuracy: 
+1.0

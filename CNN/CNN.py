@@ -164,37 +164,47 @@ class DummyCNN(ConvNN):
         print("Input shape:", x.shape)  
         
         x = F.relu(self.conv1(x))
-        print("Conv1:", x.shape)
+        print("Conv. 1:", x.shape)
         x = self.pool1(x)
-        print("Pool1:", x.shape)
+        print("Pool. 1:", x.shape)
         
         x = F.relu(self.conv2(x))
-        print("Conv2:", x.shape)
+        print("Conv. 2:", x.shape)
         x = self.pool2(x)
-        print("Pool2:", x.shape)
+        print("Pool. 2:", x.shape)
         
         x = F.relu(self.conv3(x))
-        print("Conv3:", x.shape)
+        print("Conv. 3:", x.shape)
         x = self.pool3(x)
-        print("Pool3:", x.shape)
+        print("Pool. 3:", x.shape)
         
         x = F.relu(self.conv4(x))
-        print("Conv4:", x.shape)
+        print("Conv. 4:", x.shape)
         x = self.pool4(x)
-        print("Pool4:", x.shape)
+        print("Pool. 4:", x.shape)
         
         x = F.relu(self.conv5(x))
-        print("Conv5:", x.shape)
+        print("Conv. 5:", x.shape)
         x = self.pool5(x)
-        print("Pool5:", x.shape)
+        print("Pool. 5:", x.shape)
         
         x = F.relu(self.conv6(x))
         print("Conv6:", x.shape)
         x = self.pool6(x)
-        print("Pool6:", x.shape)         
+        print("Pool. 6:", x.shape)      
+
+        x = F.relu(self.conv7(x))
+        print("Conv. 7:", x.shape)   
         
         x = torch.flatten(x, 1)  # Flatten to [batch_size, features]
         print("Flatten:", x.shape)
+
+        x = F.relu(self.fc1(x))
+        print("F.C 1:", x.shape) 
+        x = F.relu(self.fc2(x))
+        print("F.C 2:", x.shape) 
+        x = self.fc3(x)     
+        print("F.C 3:", x.shape) 
                 
         return x
 
