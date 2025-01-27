@@ -10,15 +10,17 @@ from CNN import ConvNN
 model = ConvNN()
 
 # Specify the input shape (e.g., batch_size=1, channels=3, length=1024 for 1D CNN)
-input_shape = (3, 65536)
+input_shape = (1, 3, 65536)
 
 # Visualize the model using visualtorch
-img = visualtorch.layered_view(
+
+
+img = visualtorch.lenet_view(
     model,
     input_shape=input_shape,
-    one_dim_orientation="y",
-    spacing=40,
 )
+
+
 
 # Display the visualization
 plt.axis("off")
